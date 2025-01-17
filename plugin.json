@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Mics",
+  "FriendlyName": "TranslateLocalization",
+  "SystemName": "Misc.TranslateLocalization",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.80" ],
+  "Author": "Bhautik Poriya",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.TranslateLocalization.dll",
+  "Description": "This plugin allows you to translate the resource string(xml file)."
+}
