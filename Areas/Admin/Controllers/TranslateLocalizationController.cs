@@ -55,6 +55,17 @@ public class TranslateLocalizationController : BasePluginController
             using (var stream = file.OpenReadStream())
             {
                 var document = XDocument.Load(stream);
+                var languageElement = document.Root;
+
+                if (languageElement != null && languageElement.Name == "Language")
+                {
+                    var nameAttribute = languageElement.Attribute("Name");
+                    if (nameAttribute != null)
+                    {
+                        nameAttribute.Value = toLanguage;
+                    }
+                }
+
                 var elements = document.Descendants("LocaleResource");
 
                 foreach (var element in elements)
